@@ -46,14 +46,10 @@ describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
     //fail('Teste vazio!');
     // ESCREVA SEUS TESTES ABAIXO:
     expect(getCharacter()).toBeUndefined()// Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-    expect(getCharacter('Aray')).toEqual({
-      name: 'Arya Stark',
-      class: 'Rogue',
-      phrases: [ 'Not today', 'A girl has no name.' ],
-    })// Teste se a função retorna o objeto correto para o parâmetro 'Arya',
+    expect(getCharacter('Arya')).toEqual({name: 'Arya Stark', class: 'Rogue', phrases: [ 'Not today', 'A girl has no name.' ],})// Teste se a função retorna o objeto correto para o parâmetro 'Arya',
     // Teste se a função retorna o objeto correto para o parâmetro 'Brienne',
     // Teste se a função retorna o objeto correto para o parâmetro 'Melissandre',
     // Teste se os parâmetros não são Case Sensitive.
-    // Teste se ao passar um nome que não está na tabela, a função retorna undefined.
+    expect(getCharacter("João")).toBeUndefined()// Teste se ao passar um nome que não está na tabela, a função retorna undefined.
   });
 });
