@@ -34,29 +34,30 @@
 */
 
 const calculator = (number1, number2) => {
-  let obj ={
+  let obj = {
     sum: number1 + number2,
     mult: number1 * number2,
     div: Math.floor(number1 / number2),
-    sub: number1 - number2
-  }
-  return obj
+    sub: number1 - number2,
+  };
+  return obj;
 };
-console.log(calculator(2,3))
 const arrayGenerator = (type, object) => {
-  let arrayGerado = []
-  switch(type){
+  let arrayGerado = [];
+  switch (type) {
     case 'keys':
-      arrayGerado =Object.keys(object)
-      break
+      arrayGerado = Object.keys(object);
+      break;
     case 'values':
-      arrayGerado = Object.values(object)
-      break
+      arrayGerado = Object.values(object);
+      break;
     case 'entries':
-      arrayGerado = Object.entries(object)
-      break
+      arrayGerado = Object.entries(object);
+      break;
+    default:
+      break;
   }
-  return arrayGerado
+  return arrayGerado;
 };
 
 module.exports = { calculator, arrayGenerator };
